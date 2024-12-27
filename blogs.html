@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spurvo Blog - Insights on Feedback Management</title>
+    <link href="assets/css/styles.css" rel="stylesheet">
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #F9F9F9;
+            color: #0d0d0d;
+        }
+
+        h1,
+        h2 {
+            color: #0A3981;
+            font-weight: bold;
+        }
+
+        p,
+        li {
+            color: #333;
+        }
+
+        a {
+            text-decoration: none;
+            color: #0A3981;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #E38E49;
+        }
+
+        /* Navbar Styles */
+        nav {
+            background-color: #0A3981;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar-brand {
+            font-size: 1.5rem;
+            color: #fff;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar-nav .nav-link {
+            font-size: 1rem;
+            padding: 10px 15px;
+            text-transform: uppercase;
+            font-weight: bold;
+            color: #fff;
+            transition: color 0.3s ease, background-color 0.3s ease;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #E38E49;
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        /* Navbar Active Link */
+        .navbar-nav .nav-link.active {
+            color: #E38E49;
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+
+        /* Navbar Container Flexbox Adjustment */
+        .navbar-collapse {
+            display:flex;
+            justify-content: flex-end;
+        }
+
+        /* Navbar Items Alignment */
+        .navbar-nav {
+            margin-left: auto;
+            display: flex;
+            gap: 20px;
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        /* Mobile Navbar */
+        @media (max-width: 768px) {
+            .navbar-nav .nav-link {
+                font-size: 0.9rem;
+                padding: 8px 12px;
+            }
+        }
+
+        /* Blogs Section */
+        .blogs-section {
+            padding: 50px 0;
+            background-color: #ffffff;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        .blogs-section h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .blogs-section p {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+        }
+
+        /* Blog Card */
+        .blog-card {
+            background-color: #f7f7f7;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+
+        .blog-card h3 {
+            color: #0A3981;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+
+        .blog-card p {
+            font-size: 1rem;
+            margin-bottom: 20px;
+        }
+
+        .blog-card a {
+            font-weight: bold;
+            color: #E38E49;
+        }
+
+        .blog-card a:hover {
+            color: #0A3981;
+        }
+
+        /* Footer */
+        footer {
+            padding: 30px 0;
+            background-color: #0A3981;
+            color: #fff;
+            text-align: center;
+        }
+
+        footer a {
+            color: #fff;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: #E38E49;
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 768px) {
+            .blogs-section {
+                padding: 30px;
+            }
+
+            .navbar-nav .nav-link {
+                font-size: 0.9rem;
+            }
+
+            .blog-card h3 {
+                font-size: 1.5rem;
+            }
+
+            .form-control {
+                font-size: 1rem;
+            }
+
+            h1 {
+                font-size: 2.5rem;
+            }
+        }
+
+        .logo {
+            font-family: 'Arial', sans-serif;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .logo .orange {
+            color: #E89B50;
+        }
+
+        .logo .blue {
+            color: #ffffff;
+        }
+    </style>
+</head>
+
+<body class="bg-light">
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg sticky-top" style="background-color: #0A3981;">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center text-white fw-bold" href="#">
+                <div class="logo">
+                    <span class="orange">S</span><span class="blue">purvo</span>
+                </div>
+            </a>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="blogs.html">Blogs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="changelog.html">Changelog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Navigation Bar -->
+
+    <div class="container blogs-section">
+        <h1 class="text-center">Welcome to the Spurvo Blog</h1>
+        <p class="lead text-center">Explore the latest insights, tips, and updates on customer feedback management and product development. Stay tuned for new articles that will help you turn feedback into actionable priorities.</p>
+
+        <!-- Blog Post 1 -->
+        <div class="row">
+            <div class="col-md-8 mx-auto">
+                <div class="blog-card">
+                    <h3>Turning Feedback Into Actionable Insights</h3>
+                    <p>In this post, we discuss how businesses can effectively capture and analyze feedback from their users. Learn how to turn this valuable information into actionable insights that drive product improvements...</p>
+                    <a href="#">Read More</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Blog Post 2 -->
+        <div class="row">
+            <div class="col-md-8 mx-auto">
+                <div class="blog-card">
+                    <h3>How Spurvo Helps Businesses Engage with Their Users</h3>
+                    <p>Discover how Spurvo's tools like feedback boards and public roadmaps can help businesses improve user engagement, prioritize ideas, and create products that meet customer needs...</p>
+                    <a href="#">Read More</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Blog Post 3 -->
+        <div class="row">
+            <div class="col-md-8 mx-auto">
+                <div class="blog-card">
+                    <h3>Success Stories: How Spurvo Has Transformed Product Development</h3>
+                    <p>Read about how startups, charities, and enterprises have successfully used Spurvo to streamline their product development process and create products that solve real-world problems...</p>
+                    <a href="#">Read More</a>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="mt-5 mb-3">Stay Connected for More Insights</h2>
+        <p class="lead mb-5">Follow us for more insightful blogs and updates on customer feedback management and product development.</p>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Spurvo. All rights reserved.</p>
+        <p><a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms & Conditions</a></p>
+    </footer>
+    <!-- Footer -->
+
+    <script src="assets/js/scripts.js"></script>
+</body>
+
+</html>

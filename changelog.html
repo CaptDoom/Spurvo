@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spurvo Changelog</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <link href="assets/css/styles.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+    
+        /* General Styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #F9F9F9;
+            color: #333;
+        }
+
+        h1, h2 {
+            font-family: 'Poppins', sans-serif;
+            color: #0A3981;
+            font-weight: 600;
+        }
+
+        p, li {
+            font-size: 1rem;
+            color: #666;
+        }
+
+        a {
+            text-decoration: none;
+            color: #0A3981;
+            transition: all 0.3s ease;
+        }
+
+        a:hover {
+            color: #E38E49;
+            transform: translateY(-2px);
+        }
+
+        /* Navbar Styles */
+        nav {
+            background-color: #0A3981; /* Dark blue background */
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Added subtle shadow for depth */
+        }
+
+        .navbar-brand {
+            font-size: 1.5rem;
+            color: #fff; /* White color for brand */
+            font-weight: bold;
+        }
+
+        .navbar-nav .nav-link {
+            font-size: 1rem;
+            padding: 10px 15px;
+            text-transform: uppercase;
+            font-weight: bold;
+            color: #fff; /* White color for links */
+            transition: color 0.3s ease, background-color 0.3s ease; /* Smooth transition effect */
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #E38E49; /* Gold color on hover */
+            background-color: rgba(255, 255, 255, 0.1); /* Slight white background on hover */
+        }
+
+        /* Navbar Active Link */
+        .navbar-nav .nav-link.active {
+            color: #E38E49; /* Gold color for active link */
+            background-color: rgba(0, 0, 0, 0.1); /* Slight dark background for active link */
+        }
+
+        /* Mobile Navbar */
+        @media (max-width: 768px) {
+            .navbar-nav .nav-link {
+                font-size: 0.9rem;
+                padding: 8px 12px;
+            }
+        }
+
+        /* Changelog Section */
+        .changelog-section {
+            padding: 60px 30px;
+            background-color: #ffffff;
+            box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .changelog-section h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-align: center;
+            transition: transform 0.5s ease;
+        }
+
+        .changelog-section p {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        /* Changelog Entries */
+        .changelog-entry {
+            margin-bottom: 30px;
+            border-bottom: 1px solid #EEE;
+            padding-bottom: 20px;
+        }
+
+        .changelog-entry h3 {
+            color: #0A3981;
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        .changelog-entry ul {
+            margin-left: 20px;
+        }
+
+        .changelog-entry li {
+            font-size: 1rem;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        /* Footer */
+        footer {
+            padding: 30px 0;
+            background-color: #0A3981;
+            color: #fff;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: #fff;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        footer a:hover {
+            color: #E38E49;
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 768px) {
+            .changelog-section {
+                padding: 40px 20px;
+            }
+
+            .navbar-nav .nav-link {
+                font-size: 0.9rem;
+                padding: 8px 12px;
+            }
+
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .changelog-entry h3 {
+                font-size: 1.3rem;
+            }
+
+            .changelog-entry ul {
+                margin-left: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .changelog-section h1 {
+                font-size: 2rem;
+            }
+
+            footer {
+                font-size: 0.8rem;
+            }
+
+            .navbar-nav .nav-link {
+                font-size: 0.8rem;
+                padding: 6px 10px;
+            }
+        }
+
+        .logo {
+            font-family: 'Arial', sans-serif;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .logo .orange {
+            color: #E89B50;  /* Orange tone */
+        }
+
+        .logo .blue {
+            color: #ffffff;  /* Dark blue tone */
+        }
+        .navbar-nav {
+    display: flex;
+    justify-content: flex-end; /* Aligns items to the right */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-nav .nav-item {
+    margin: 0 10px;  /* Adds spacing between items */
+}
+
+        
+        
+
+    </style>
+</head>
+<body class="bg-light">
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg sticky-top" style="background-color: #0A3981;">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center text-white fw-bold" href="#">
+                <div class="logo">
+                    <span class="orange">S</span><span class="blue">purvo</span>
+                </div>
+            </a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto" style="display: flex; list-style: none; margin: 0; padding: 0;">
+                    <li class="nav-item"><a class="nav-link text-white" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="blogs.html">Blogs</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="changelog.html">Changelog</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="contact.html">Contact</a></li>
+                </ul>
+                
+            </div>
+        </div>
+    </nav>
+
+    <!-- Changelog Section -->
+    <div class="container changelog-section">
+        <h1>Changelog</h1>
+        <p class="lead">Stay up-to-date with the latest updates, improvements, and new features of Spurvo!</p>
+        <p>Welcome to the Spurvo Changelog—your source for all the latest updates, improvements, and new features of our platform. Here, we keep you informed on everything that’s changing at Spurvo, so you can make the most of our evolving features.</p>
+        <p>Each update is aimed at improving your experience with our platform, whether it's new ways to capture user feedback, enhanced analytics, or better customization options for your roadmaps. Our goal is to make product development more intuitive, engaging, and efficient for you and your team.</p>
+        <p>Check this page regularly for detailed release notes, and don’t miss out on new features that could help you build better products, faster. Stay tuned for our upcoming feature rollouts that will keep you ahead in the feedback game.</p>
+
+        <!-- Changelog Entries -->
+        <div class="changelog-entry">
+            <h3>Version 1.0.0 - December 2024</h3>
+            <p>Our initial release includes the following features:</p>
+            <ul>
+                <li>Contact form functionality</li>
+                <li>Navbar with responsive design</li>
+                <li>Updated footer with privacy policy and terms</li>
+            </ul>
+        </div>
+        
+        <div class="changelog-entry">
+            <h3>Version 1.1.0 - January 2025</h3>
+            <p>We've made some improvements and added new features:</p>
+            <ul>
+                <li>Improved UI for the Contact page</li>
+                <li>Bug fixes for the form submission</li>
+                <li>Added new blog section for latest posts</li>
+            </ul>
+        </div>
+
+        <div class="changelog-entry">
+            <h3>Version 1.2.0 - February 2025</h3>
+            <p>This release focuses on enhancing the overall user experience:</p>
+            <ul>
+                <li>Better responsiveness for mobile devices</li>
+                <li>Improved loading times for pages</li>
+                <li>Minor bug fixes and performance optimizations</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Spurvo. All Rights Reserved.</p>
+        <p><a href="privacy-policy.html">Privacy Policy</a> | <a href="terms-of-service.html">Terms of Service</a></p>
+    </footer>
+
+    <!-- Script for functionality -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
